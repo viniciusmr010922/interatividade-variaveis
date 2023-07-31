@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Lógicos</title>
+    <style>
+        body {
+            padding: 50px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        
+        div {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Canetas Vermelha e Azul</h1>
+    <h2 id="text"></h2>
+    <a href="#" onclick="logico()">Executar Lógico</a>
+
+    <script>
+        function logico() {
+
+            var caneta1 = window.prompt("Uma cor de Caneta")
+            var caneta2 = window.prompt("Outra cor de Caneta")
+
+            if (caneta1 == "vermelha" && caneta2 == "azul") {
+                msg = `eu tenho uma caneta ${caneta1} E uma caneta ${caneta2}`
+
+                document.getElementById("text").textContent = msg
+
+
+            }
+            if (caneta1 == "vermelha" || caneta2 == "azul") {
+                msg = `eu tenho uma caneta ${caneta1} OU uma caneta ${caneta2}`
+
+                document.getElementById("text").textContent = msg
+
+            }
+            if (caneta1 != "vermelha") {
+                msg = `eu tenho uma caneta  ${caneta1}`
+                document.getElementById("text").textContent = msg
+            }
+        }
+    </script>
+</body>
+
+</html>

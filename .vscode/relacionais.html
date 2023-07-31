@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Relacionais</title>
+    <style>
+        body {
+            padding: 50px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        
+        div {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="text"></h2>
+    <a href="#" onclick="relacionar()">Executar Relacional</a>
+
+    <script>
+        function relacionar() {
+
+
+            var naosei = Number.parseInt(window.prompt("Digite um Número:"))
+            var seinao = Number.parseInt(window.prompt("Digite outro Número:"))
+            if (naosei > seinao) {
+                msg = `${naosei} é maior que ${seinao}`
+                document.getElementById("text").textContent = msg
+            }
+            if (naosei == seinao) {
+                msg = `${naosei} é igual a ${seinao}`
+                document.getElementById("text").textContent = msg
+            }
+            if (naosei < seinao) {
+                msg = `${naosei} é menor que ${seinao}`
+                document.getElementById("text").textContent = msg
+            }
+        }
+    </script>
+
+</body>
+
+</html>

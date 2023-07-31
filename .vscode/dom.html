@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo o DOM</title>
+    <style>
+        body {
+            background-color: yellow;
+            color: darkblue;
+            font-family: sans-serif;
+        }
+        
+        h1 {
+            color: green;
+        }
+        
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="dominio">Entendendo o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a utilizar o <strong>DOM</strong> com JavaScript</p>
+    <div onclick="modoEscuro()">Clique aqui!</div>
+
+    <script>
+        function modoEscuro() {
+            var qualquerNome = window.document.getElementById("dominio")
+            qualquerNome.style.backgroundColor = "black"
+            qualquerNome.style.backgroundColor = "black"
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Variaveis</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="texto"></h1>
+    <a href="#" onclick="mostraNome()">Mostrar Nome</a><br>
+    <a href="#" onclick="soma()">Fazer Soma</a> <br>
+    <a href="#" onclick="subtrair()">Fazer Subtração</a> <br>
+    <a href="#" onclick="dividir()">Fazer Divisão</a> <br>
+    <a href="#" onclick="multiplica()">Fazer Multiplicação</a> <br>
+    <a href="#" onclick="resto()">Resto da Divisão</a><br>
+    <a href="#" onclick="moeda()">Mostra Valor em Reais (R$)</a>
+
+    <script>
+        function mostraNome() {
+            var nome = window.prompt("Digite seu nome")
+            var letras = nome.length
+            var msg = " Olá, " + nome + " é muito bom ter você por aqui! Seu nome tem " + letras + " letras "
+            document.getElementById("texto").textContent = msg
+        }
+
+        function soma() {
+            var valor1 = Number(window.prompt("Digite um Número:"))
+            var valor2 = Number(window.prompt("Digite outro Número:"))
+            var result = valor1 + valor2
+            msg = "A soma de " + valor1 + " e " + valor2 + " é igual a " + result
+            document.getElementById("texto").textContent = msg
+
+        }
+
+        function subtrair() {
+            var valor1 = Number(window.prompt("Digite um Número:"))
+            var valor2 = Number(window.prompt("Digite outro Número:"))
+            var result = valor1 - valor2
+            msg = "A subtração de " + valor1 + " e " + valor2 + " é igual a " + result
+            document.getElementById("texto").textContent = msg
+
+        }
+
+        function dividir() {
+            var valor1 = Number(window.prompt("Digite um Número:"))
+            var valor2 = Number(window.prompt("Digite outro Número:"))
+            var result = valor1 / valor2
+            msg = "A divisão de " + valor1 + " e " + valor2 + " é igual a " + result
+            document.getElementById("texto").textContent = msg
+
+        }
+
+        function multiplica() {
+            var x1 = Number(window.prompt("Digite um Número:"))
+            var x2 = Number(window.prompt("Digite outro Número:"))
+            var r3 = x1 * x2
+            msg = `A multiplicação de  ${x1} e ${x2} é igual a  ${r3} `
+            document.getElementById("texto").textContent = msg
+        }
+
+        function resto() {
+
+            var r1 = Number(window.prompt("Digite um Número:"))
+            var r2 = Number(window.prompt("Digite outro Número:"))
+            var r3 = r1 % r2
+            msg = `O resto da divisão de ${r1} e ${r2} é ${r3}`
+            document.getElementById("texto").textContent = msg
+        }
+
+        function moeda() {
+            var valor = Number(window.prompt("Digite um Valor com duas casas decimais:"))
+            var real = valor.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            })
+            document.getElementById("texto").textContent = real
+        }
+    </script>
+
+</body>
+
+</html>
